@@ -73,6 +73,14 @@ public interface RedisCommandsContainer extends Serializable {
     void sadd(String setName, String value);
 
     /**
+     * Removes the specified member from the set stored at key.
+     *
+     * @param key The name of the Set
+     * @param element  element to be removed
+     */
+    void srem(String key, String element);
+
+    /**
      * Posts a message to the given channel.
      *
      * @param channelName Name of the channel to which data will be published
